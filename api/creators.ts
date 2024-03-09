@@ -40,13 +40,12 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   let creators: CreatorsXXX = req.body;
   let sql =
-  "INSERT INTO `creators`( `movie_id`, `person_id`, `type`, `name`) VALUES (?,?,?,?)";
+  "INSERT INTO `creators`( `movie_id`, `person_id`, `type`) VALUES (?,?,?)";
   sql = mysql.format(sql, [
 
     creators.movie_id,
     creators.person_id,
-    creators.type,
-    creators.name,
+    creators.type
 
 
 
