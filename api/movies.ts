@@ -32,7 +32,7 @@ router.get("/", (req, res) => {
     let query3 = "SELECT DISTINCT creators.type as creators_type, creators.name as creators_name FROM creators JOIN person ON creators.person_id = person.person_id JOIN movies ON creators.movie_id = movies.movie_id WHERE movies.title LIKE ?";
 
     let results : any= {};
-
+  //GGGGGGssss
     conn.query(query1, [title], (err, result1) => {
         if (err) {
             console.error(err);
