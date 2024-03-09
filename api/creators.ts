@@ -24,16 +24,16 @@ router.get("/:id", (req, res) => {
 
   // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-  router.get("/search/fields", (req, res) => {
-    conn.query(
-      "select * from creators where (creators_id IS NULL OR creators_id = ?) OR (name IS NULL OR name like ?)",
-      [ req.query.id, "%" + req.query.name + "%"],
-      (err, result, fields) => {
-      if (err) throw err;
-        res.json(result);
-      }
-    );
-  });
+  // router.get("/search/fields", (req, res) => {
+  //   conn.query(
+  //     "select * from creators where (creators_id IS NULL OR creators_id = ?) OR (name IS NULL OR name like ?)",
+  //     [ req.query.id, "%" + req.query.name + "%"],
+  //     (err, result, fields) => {
+  //     if (err) throw err;
+  //       res.json(result);
+  //     }
+  //   );
+  // });
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
